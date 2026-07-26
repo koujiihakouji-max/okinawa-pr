@@ -29,8 +29,11 @@ body{font-family:'Noto Sans JP',sans-serif;background:#fff;color:var(--text);lin
 .bc{background:#F8FAFC;border-bottom:1px solid var(--border);padding:10px 24px;font-size:12px;color:var(--text-s)}
 .bc a{color:var(--accent);text-decoration:none}
 .wrap{max-width:860px;margin:0 auto;padding:0 18px 64px}
-.hero{background:linear-gradient(135deg,#0F1C2E 0%,#1A3A2A 60%,#1E5030 100%);border-radius:var(--r);padding:40px 36px;color:#fff;margin:28px 0;position:relative;overflow:hidden}
-.hero::after{content:'🍽️';position:absolute;right:28px;bottom:16px;font-size:76px;opacity:.10;line-height:1;pointer-events:none}
+.hero{position:relative;border-radius:var(--r);overflow:hidden;margin:28px 0;min-height:300px;display:flex;align-items:center}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,28,46,.88) 0%,rgba(26,58,42,.80) 60%,rgba(30,80,48,.65) 100%)}
+.hero-body{position:relative;z-index:1;padding:44px 36px;color:#fff;max-width:620px}
+
 .hero-eyebrow{font-size:11px;font-weight:700;letter-spacing:1.8px;color:var(--accent-l);margin-bottom:10px;text-transform:uppercase}
 .hero h1{font-size:clamp(19px,3.8vw,27px);font-weight:900;line-height:1.4;margin-bottom:12px}
 .hero h1 em{color:#FFE08A;font-style:normal}
@@ -117,6 +120,12 @@ footer{text-align:center;font-size:12px;color:var(--text-s);padding:22px;border-
 
 <div class="wrap">
   <div class="hero">
+    <img class="hero-img"
+      src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&auto=format&fit=crop&q=80"
+      alt="賑わうレストランの様子"
+      loading="eager">
+    <div class="hero-overlay"></div>
+    <div class="hero-body">
     <div class="hero-eyebrow">飲食店オーナー向け 集客ガイド 2025</div>
     <h1>飲食店・カフェの集客ツール比較7選<br><em>グルメ系インフルエンサーに来店PR依頼する方法</em></h1>
     <div class="hero-sub">「新規客が全然来ない」「ホットペッパーの広告費が高い」「インスタグラマーにお店を紹介してほしい」── そんな沖縄・全国の飲食店・カフェオーナーのために、低コストで始められるインフルエンサー集客ツールを比較しました。</div>
@@ -127,6 +136,7 @@ footer{text-align:center;font-size:12px;color:var(--text-s);padding:22px;border-
       <span class="chip">来店インフルエンサー</span>
       <span class="chip">食べ歩き PR 依頼</span>
     </div>
+    </div><!-- /hero-body -->
   </div>
 
   <div class="problem">
@@ -209,8 +219,8 @@ footer{text-align:center;font-size:12px;color:var(--text-s);padding:22px;border-
         <li>初期費用ゼロ・月額ゼロで試せる（クレジットカード不要）</li>
       </ul>
       <div class="cta-row">
-        <a href="https://influbridge.vercel.app" class="btn-p gold">無料で始める →</a>
-        <a href="https://influbridge.vercel.app" class="btn-o">詳細を見る</a>
+        <a href="https://influbridge.jp/brand" class="btn-p gold">無料で始める →</a>
+        <a href="https://influbridge.jp/lp/mayowanai" class="btn-o">詳細を見る</a>
       </div>
     </div>
 
@@ -314,8 +324,8 @@ footer{text-align:center;font-size:12px;color:var(--text-s);padding:22px;border-
     <h2>お店の集客、<span>InfluBridge</span>で変えてみませんか？</h2>
     <p>グルメ系インフルエンサーへの来店依頼が、初期費用ゼロで今すぐできます。沖縄の飲食店にも対応しています。</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-      <a href="https://influbridge.vercel.app" class="btn-w">無料で始める →</a>
-      <a href="https://influbridge.vercel.app" class="btn-gh">サービス詳細を見る</a>
+      <a href="https://influbridge.jp/brand" class="btn-w">無料で始める →</a>
+      <a href="https://influbridge.jp/lp/mayowanai" class="btn-gh">サービス詳細を見る</a>
     </div>
   </div>
 </div>

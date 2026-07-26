@@ -26,8 +26,11 @@ body{font-family:'Noto Sans JP',sans-serif;background:#fff;color:var(--text);lin
 .bc{background:#F8FAFC;border-bottom:1px solid var(--border);padding:10px 24px;font-size:12px;color:var(--text-s)}
 .bc a{color:var(--accent);text-decoration:none}
 .wrap{max-width:860px;margin:0 auto;padding:0 18px 64px}
-.hero{background:linear-gradient(135deg,#0F1C2E 0%,#1A2A50 60%,#1E2E60 100%);border-radius:var(--r);padding:40px 36px;color:#fff;margin:28px 0;position:relative;overflow:hidden}
-.hero::after{content:'💇';position:absolute;right:28px;bottom:16px;font-size:76px;opacity:.10;line-height:1;pointer-events:none}
+.hero{position:relative;border-radius:var(--r);overflow:hidden;margin:28px 0;min-height:300px;display:flex;align-items:center}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,28,46,.88) 0%,rgba(26,42,80,.80) 60%,rgba(30,46,96,.65) 100%)}
+.hero-body{position:relative;z-index:1;padding:44px 36px;color:#fff;max-width:620px}
+
 .hero-eyebrow{font-size:11px;font-weight:700;letter-spacing:1.8px;color:var(--accent-l);margin-bottom:10px;text-transform:uppercase}
 .hero h1{font-size:clamp(19px,3.8vw,27px);font-weight:900;line-height:1.4;margin-bottom:12px}
 .hero h1 em{color:#FFE08A;font-style:normal}
@@ -101,6 +104,12 @@ footer{text-align:center;font-size:12px;color:var(--text-s);padding:22px;border-
 <nav class="bc"><a href="#">TOP</a> › <a href="#">集客ツール</a> › 美容室・サロンの集客ツール比較</nav>
 <div class="wrap">
   <div class="hero">
+    <img class="hero-img"
+      src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&auto=format&fit=crop&q=80"
+      alt="美容室でのヘアカットの様子"
+      loading="eager">
+    <div class="hero-overlay"></div>
+    <div class="hero-body">
     <div class="hero-eyebrow">美容室・サロンオーナー向け 集客ガイド 2025</div>
     <h1>美容室・サロンの集客ツール比較7選<br><em>美容系インフルエンサーに来店・施術PR依頼する方法</em></h1>
     <div class="hero-sub">「新規集客がホットペッパーだけに頼っている」「美容系インスタグラマーにサロンを紹介してほしい」── そんな沖縄・全国の美容室・ネイルサロン・エステオーナーのために、低コストで使えるインフルエンサー集客ツールを比較しました。</div>
@@ -187,16 +196,16 @@ footer{text-align:center;font-size:12px;color:var(--text-s);padding:22px;border-
         <li>初期費用ゼロ・月額ゼロのプランで試せる</li>
       </ul>
       <div class="cta-row">
-        <a href="https://influbridge.vercel.app" class="btn-p gold">無料で始める →</a>
-        <a href="https://influbridge.vercel.app" class="btn-o">詳細を見る</a>
+        <a href="https://influbridge.jp/brand" class="btn-p gold">無料で始める →</a>
+        <a href="https://influbridge.jp/lp/mayowanai" class="btn-o">詳細を見る</a>
       </div>
     </div>
 
-    <div class="card"><div class="rank">2位</div><div class="card-head"><div class="logo l-tr">TR</div><div><div class="svc-name">トリドリマーケティング</div><div class="svc-co">株式会社トリドリ</div><div class="tags"><span class="tag">来店PR対応</span><span class="tag g">月額5万円〜</span></div></div></div><div class="svc-desc">美容・サロン業界での導入実績がある国内主要マッチングサービス。案件登録後にインフルエンサーが応募する仕組み。<strong>月額50,000円〜の固定費</strong>が発生するため個人経営サロンには負担が大きい場合も。対応SNSはInstagramのみ。</div><div class="pts"><div class="pt"><div class="pt-l">初期費用</div><div class="pt-v">無料</div></div><div class="pt"><div class="pt-l">月額料金</div><div class="pt-v">50,000円〜</div></div><div class="pt"><div class="pt-l">対応SNS</div><div class="pt-v">Instagram</div></div></div><div class="cta-row"><a href="#" class="btn-o">公式サイトを見る</a></div></div>
+    <div class="card"><div class="rank">2位</div><div class="card-head"><div class="logo l-tr">TR</div><div><div class="svc-name">トリドリマーケティング</div><div class="svc-co">株式会社トリドリ</div><div class="tags"><span class="tag">来店PR対応</span><span class="tag g">月額5万円〜</span></div></div></div><div class="svc-desc">美容・サロン業界での導入実績がある国内主要マッチングサービス。案件登録後にインフルエンサーが応募する仕組み。<strong>月額50,000円〜の固定費</strong>が発生するため個人経営サロンには負担が大きい場合も。対応SNSはInstagramのみ。</div><div class="pts"><div class="pt"><div class="pt-l">初期費用</div><div class="pt-v">無料</div></div><div class="pt"><div class="pt-l">月額料金</div><div class="pt-v">50,000円〜</div></div><div class="pt"><div class="pt-l">対応SNS</div><div class="pt-v">Instagram</div></div></div><div class="cta-row"><a href="https://toridori-marketing.com/" class="btn-o" target="_blank" rel="noopener">公式サイトを見る</a></div></div>
 
-    <div class="card"><div class="rank">3位</div><div class="card-head"><div class="logo l-if">IF</div><div><div class="svc-name">INFLUFECT</div><div class="svc-co">リデル株式会社</div><div class="tags"><span class="tag">自動化・PDCA</span><span class="tag g">初期費用20万円</span></div></div></div><div class="svc-desc">累計7,000社以上の導入実績を持つ運用型プラットフォーム。美容業界の大手チェーンや化粧品ブランドの利用実績も多い。ただし<strong>初期費用20万円＋月額費用</strong>がかかるため個人経営サロンには向かない。複数店舗のサロンチェーン・美容ブランド向け。</div><div class="pts"><div class="pt"><div class="pt-l">初期費用</div><div class="pt-v">200,000円</div></div><div class="pt"><div class="pt-l">月額料金</div><div class="pt-v">9,800円〜（年払い）</div></div><div class="pt"><div class="pt-l">対応SNS</div><div class="pt-v">IG/YT/TikTok/X</div></div></div><div class="cta-row"><a href="#" class="btn-o">公式サイトを見る</a></div></div>
+    <div class="card"><div class="rank">3位</div><div class="card-head"><div class="logo l-if">IF</div><div><div class="svc-name">INFLUFECT</div><div class="svc-co">リデル株式会社</div><div class="tags"><span class="tag">自動化・PDCA</span><span class="tag g">初期費用20万円</span></div></div></div><div class="svc-desc">累計7,000社以上の導入実績を持つ運用型プラットフォーム。美容業界の大手チェーンや化粧品ブランドの利用実績も多い。ただし<strong>初期費用20万円＋月額費用</strong>がかかるため個人経営サロンには向かない。複数店舗のサロンチェーン・美容ブランド向け。</div><div class="pts"><div class="pt"><div class="pt-l">初期費用</div><div class="pt-v">200,000円</div></div><div class="pt"><div class="pt-l">月額料金</div><div class="pt-v">9,800円〜（年払い）</div></div><div class="pt"><div class="pt-l">対応SNS</div><div class="pt-v">IG/YT/TikTok/X</div></div></div><div class="cta-row"><a href="https://liddell.tokyo/service/influfect/" class="btn-o" target="_blank" rel="noopener">公式サイトを見る</a></div></div>
 
-    <div class="card"><div class="rank">4位</div><div class="card-head"><div class="logo l-fm">FM</div><div><div class="svc-name">Find Model</div><div class="svc-co">ソーシャルワイヤー株式会社</div><div class="tags"><span class="tag a">基本無料</span><span class="tag g">成果報酬型</span></div></div></div><div class="svc-desc">初期費用・月額費用ゼロで使える成果報酬型サービス。美容系インフルエンサーとの取引実績もあり来店型PR依頼も可能。ただし<strong>企業側からキャスティング依頼するスタイル</strong>のため、インフルエンサー側からの応募は来ない。</div><div class="pts"><div class="pt"><div class="pt-l">初期費用</div><div class="pt-v">無料</div></div><div class="pt"><div class="pt-l">月額料金</div><div class="pt-v">無料</div></div><div class="pt"><div class="pt-l">対応SNS</div><div class="pt-v">Instagram/X/YouTube</div></div></div><div class="cta-row"><a href="#" class="btn-o">公式サイトを見る</a></div></div>
+    <div class="card"><div class="rank">4位</div><div class="card-head"><div class="logo l-fm">FM</div><div><div class="svc-name">Find Model</div><div class="svc-co">ソーシャルワイヤー株式会社</div><div class="tags"><span class="tag a">基本無料</span><span class="tag g">成果報酬型</span></div></div></div><div class="svc-desc">初期費用・月額費用ゼロで使える成果報酬型サービス。美容系インフルエンサーとの取引実績もあり来店型PR依頼も可能。ただし<strong>企業側からキャスティング依頼するスタイル</strong>のため、インフルエンサー側からの応募は来ない。</div><div class="pts"><div class="pt"><div class="pt-l">初期費用</div><div class="pt-v">無料</div></div><div class="pt"><div class="pt-l">月額料金</div><div class="pt-v">無料</div></div><div class="pt"><div class="pt-l">対応SNS</div><div class="pt-v">Instagram/X/YouTube</div></div></div><div class="cta-row"><a href="https://find-model.jp/" class="btn-o" target="_blank" rel="noopener">公式サイトを見る</a></div></div>
   </section>
 
   <section class="sec" id="cost">
@@ -249,8 +258,8 @@ footer{text-align:center;font-size:12px;color:var(--text-s);padding:22px;border-
     <h2>サロンの集客、<span>InfluBridge</span>で変えてみませんか？</h2>
     <p>美容系インフルエンサーへの来店依頼が、初期費用ゼロで今すぐできます。沖縄の美容室・サロンにも対応しています。</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-      <a href="https://influbridge.vercel.app" class="btn-w">無料で始める →</a>
-      <a href="https://influbridge.vercel.app" class="btn-gh">サービス詳細を見る</a>
+      <a href="https://influbridge.jp/brand" class="btn-w">無料で始める →</a>
+      <a href="https://influbridge.jp/lp/mayowanai" class="btn-gh">サービス詳細を見る</a>
     </div>
   </div>
 </div>
