@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>広告費を削減して集客する方法【2025年】ホットペッパーをやめたい沖縄の店舗向け比較</title>
+<meta name="description" content="「ホットペッパーをやめたい」「広告費が高すぎる」という沖縄の飲食店・美容室オーナーへ。広告費ゼロで集客できるUGCマーケティングツールを比較。InfluBridgeなら初期費用無料で始められます。">
+<link rel="canonical" href="https://okinawa-pr.jp/koukoku-yameraretai">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ホットペッパーをやめて他の集客方法に移行できますか？","acceptedAnswer":{"@type":"Answer","text":"はい。InfluBridgeのようなUGCマーケティングプラットフォームを使えば、ホットペッパーより低コストで集客できます。まず並行して試して効果を確認してから移行するのがおすすめです。"}},{"@type":"Question","name":"広告費ゼロで集客することはできますか？","acceptedAnswer":{"@type":"Answer","text":"UGCマーケティングを活用すれば、広告費を大幅に削減できます。来店型UGCは食事・施術の無料提供のみで依頼できるケースも多く、実質広告費ゼロに近い形で始められます。"}}]}</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Inter:wght@400;700;800;900&display=swap');
+:root{--navy:#080F1A;--navy2:#0D1B2E;--teal:#00B4D8;--teal-l:#48CAE4;--amber:#F4A261;--red:#FC8181;--white:#FFFFFF;--text-s:#90A4B4;--border:rgba(0,180,216,.15)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden;cursor:none}
+#cursor{position:fixed;width:12px;height:12px;background:var(--teal);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:screen}
+#cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid rgba(0,180,216,.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%)}
+#bg-canvas{position:fixed;inset:0;z-index:0;pointer-events:none}
+.gnav{position:fixed;top:0;left:0;right:0;z-index:200;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;transition:background .3s}
+.gnav.scrolled{background:rgba(8,15,26,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.gnav-logo{font-family:'Inter',sans-serif;font-weight:900;font-size:18px;color:var(--white);text-decoration:none;letter-spacing:-1px}
+.gnav-logo span{color:var(--teal-l)}
+.gnav-links{display:flex;align-items:center;gap:24px}
+.gnav-links a{font-size:12px;font-weight:700;color:var(--text-s);text-decoration:none;letter-spacing:.5px;text-transform:uppercase;transition:color .2s}
+.gnav-links a:hover{color:var(--teal-l)}
+.gnav-cta{background:var(--teal)!important;color:var(--navy)!important;padding:9px 20px!important;border-radius:8px;font-size:13px!important}
+section{position:relative;z-index:1}
+.wrap{max-width:900px;margin:0 auto;padding:0 24px}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-content{text-align:center;padding:100px 24px;max-width:900px;width:100%}
+.hero-badge{display:inline-block;background:rgba(252,129,129,.1);border:1px solid rgba(252,129,129,.2);color:var(--red);font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:8px 20px;border-radius:100px;margin-bottom:28px}
+.hero-title{font-family:'Inter',sans-serif;font-size:clamp(36px,7.5vw,84px);font-weight:900;line-height:.95;letter-spacing:-3px;margin-bottom:28px}
+.hero-title .l1{display:block;color:rgba(255,255,255,.35);font-size:.45em;letter-spacing:-1px;margin-bottom:10px}
+.hero-title .l2{display:block;color:var(--white)}
+.hero-title .l3{display:block;background:linear-gradient(90deg,var(--amber),#F4A261,var(--teal-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 4s linear infinite;background-size:200% auto}
+@keyframes shimmer{from{background-position:0% center}to{background-position:200% center}}
+.hero-sub{font-size:16px;color:var(--text-s);line-height:1.9;max-width:520px;margin:0 auto 36px}
+.hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-glow{display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-size:14px;font-weight:700;padding:15px 32px;border-radius:12px;text-decoration:none;transition:all .2s}
+.btn-glow.primary{background:var(--teal);color:var(--navy);box-shadow:0 0 24px rgba(0,180,216,.4)}
+.btn-glow.primary:hover{background:var(--teal-l);box-shadow:0 0 40px rgba(0,180,216,.6);transform:translateY(-2px)}
+.btn-glow.ghost{border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.7)}
+.btn-glow.ghost:hover{background:rgba(255,255,255,.05);transform:translateY(-1px)}
+.scroll-hint{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.25);font-family:'Inter',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase}
+.scroll-line{width:1px;height:48px;background:linear-gradient(to bottom,rgba(0,180,216,.5),transparent);animation:sc 2s ease-in-out infinite}
+@keyframes sc{0%,100%{opacity:1}50%{opacity:.4}}
+
+/* COST HERO BLOCK — SIGNATURE */
+.cost-showcase{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center;margin:52px 0;perspective:1200px}
+.cost-card{border-radius:24px;padding:40px 32px;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.cost-card.bad{background:linear-gradient(135deg,rgba(239,68,68,.1),rgba(239,68,68,.04));border:1px solid rgba(239,68,68,.25);transform:perspective(800px) rotateY(10deg)}
+.cost-card.bad:hover{transform:perspective(800px) rotateY(3deg) translateY(-6px)}
+.cost-card.good{background:linear-gradient(135deg,rgba(0,180,216,.12),rgba(0,180,216,.04));border:1px solid rgba(0,180,216,.3);transform:perspective(800px) rotateY(-10deg)}
+.cost-card.good:hover{transform:perspective(800px) rotateY(-3deg) translateY(-6px)}
+.cost-card-head{font-family:'Inter',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:16px}
+.cost-card.bad  .cost-card-head{color:var(--red)}
+.cost-card.good .cost-card-head{color:var(--teal-l)}
+.cost-big{font-family:'Inter',sans-serif;font-size:52px;font-weight:900;line-height:1;margin-bottom:8px;letter-spacing:-2px}
+.cost-card.bad  .cost-big{color:var(--red)}
+.cost-card.good .cost-big{color:var(--teal-l)}
+.cost-sub{font-size:13px;color:var(--text-s);line-height:1.6}
+.cost-year{font-family:'Inter',sans-serif;font-size:24px;font-weight:700;margin-top:12px}
+.cost-card.bad  .cost-year{color:rgba(252,129,129,.7)}
+.cost-card.good .cost-year{color:rgba(72,202,228,.7)}
+.vs-orb{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy2));border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;font-size:14px;font-weight:900;color:rgba(255,255,255,.5);flex-shrink:0;box-shadow:0 0 24px rgba(0,180,216,.15)}
+
+.sec{padding:100px 0;position:relative;z-index:1}
+.sec-dark{background:var(--navy2)}
+.sec-navy{background:var(--navy)}
+.section-eyebrow{font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--teal);margin-bottom:16px}
+.section-h2{font-family:'Inter',sans-serif;font-size:clamp(28px,5vw,52px);font-weight:900;letter-spacing:-1.5px;line-height:1.1;margin-bottom:20px}
+.section-desc{font-size:15px;color:var(--text-s);line-height:1.9;max-width:600px;margin-bottom:52px}
+
+/* PROBLEM CARDS */
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px}
+.problem-card{background:rgba(239,68,68,.05);border:1px solid rgba(239,68,68,.15);border-radius:18px;padding:28px;transition:border-color .3s,transform .3s}
+.problem-card:hover{border-color:rgba(239,68,68,.3);transform:translateY(-4px)}
+.problem-num{font-family:'Inter',sans-serif;font-size:36px;font-weight:900;color:rgba(252,129,129,.2);line-height:1;margin-bottom:10px;letter-spacing:-1px}
+.problem-title{font-family:'Inter',sans-serif;font-size:14px;font-weight:700;color:var(--white);margin-bottom:8px}
+.problem-desc{font-size:13px;color:var(--text-s);line-height:1.75}
+
+/* STEP CARDS */
+.step-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;margin-top:52px}
+.step-grid::before{content:'';position:absolute;top:32px;left:12%;right:12%;height:1.5px;background:linear-gradient(90deg,rgba(0,180,216,.4),rgba(0,180,216,.1));z-index:0}
+.step-item{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 12px;position:relative;z-index:1}
+.step-circle{width:64px;height:64px;border-radius:50%;background:rgba(0,180,216,.1);border:2px solid var(--teal);display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 16px;position:relative;box-shadow:0 0 20px rgba(0,180,216,.15);transition:box-shadow .3s,transform .3s}
+.step-item:hover .step-circle{box-shadow:0 0 40px rgba(0,180,216,.35);transform:translateY(-4px) scale(1.05)}
+.step-num-badge{position:absolute;top:-4px;right:-4px;width:22px;height:22px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;font-size:10px;font-weight:800;color:var(--navy)}
+.step-title{font-family:'Inter',sans-serif;font-size:13px;font-weight:700;color:var(--white);margin-bottom:6px}
+.step-desc{font-size:11px;color:var(--text-s);line-height:1.6}
+
+/* TABLE */
+.tbl-wrap{overflow-x:auto;border-radius:16px;border:1px solid var(--border);margin-top:48px;box-shadow:0 8px 40px rgba(0,0,0,.3)}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:500px}
+th{background:rgba(0,180,216,.1);color:var(--teal-l);padding:14px 18px;text-align:left;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid var(--border)}
+td{padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.8)}
+tr:last-child td{border-bottom:none}
+tr.hl td{background:rgba(0,180,216,.06)}
+tr.hl td:first-child{border-left:2px solid var(--teal)}
+.badge{display:inline-block;background:var(--amber);color:var(--navy);font-family:'Inter',sans-serif;font-size:9px;font-weight:800;padding:2px 8px;border-radius:4px;margin-left:6px;vertical-align:middle;text-transform:uppercase}
+.ok{color:var(--teal-l);font-weight:700}.no{color:rgba(255,255,255,.2)}.warn{color:var(--red);font-weight:700}
+
+/* SVC CARDS */
+.svc-cards{margin-top:32px}
+.svc-card{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:36px;margin:20px 0;position:relative;transition:border-color .3s,box-shadow .3s,transform .3s}
+.svc-card:hover{border-color:rgba(0,180,216,.2);box-shadow:0 12px 48px rgba(0,180,216,.08);transform:translateY(-2px)}
+.svc-card.top{border-color:rgba(244,162,97,.3);background:linear-gradient(135deg,rgba(244,162,97,.05),rgba(255,255,255,.02));box-shadow:0 4px 32px rgba(244,162,97,.1)}
+.rank{position:absolute;top:-1px;left:28px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-top:none;color:rgba(255,255,255,.5);font-family:'Inter',sans-serif;font-size:10px;font-weight:700;padding:5px 14px;border-radius:0 0 8px 8px;letter-spacing:1px;text-transform:uppercase}
+.rank.gold{background:rgba(244,162,97,.15);border-color:rgba(244,162,97,.3);color:var(--amber)}
+.svc-head{display:flex;align-items:flex-start;gap:18px;margin-top:18px}
+.svc-logo{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Inter',sans-serif;font-weight:900;font-size:13px;color:var(--white)}
+.l-ib{background:linear-gradient(135deg,#0D1B2E,#0891B2);border:1px solid rgba(0,180,216,.3)}
+.l-tr{background:linear-gradient(135deg,#300808,#991B1B)}
+.l-if{background:linear-gradient(135deg,#082808,#166534)}
+.l-fm{background:linear-gradient(135deg,#081428,#1D4ED8)}
+.svc-name{font-family:'Inter',sans-serif;font-size:20px;font-weight:800;color:var(--white);letter-spacing:-.5px}
+.svc-co{font-size:12px;color:var(--text-s);margin-top:3px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.tag{font-family:'Inter',sans-serif;font-size:11px;font-weight:700;padding:4px 12px;border-radius:6px;letter-spacing:.3px}
+.tag.teal{background:rgba(0,180,216,.12);color:var(--teal-l);border:1px solid rgba(0,180,216,.2)}
+.tag.amber{background:rgba(244,162,97,.12);color:var(--amber);border:1px solid rgba(244,162,97,.2)}
+.tag.gray{background:rgba(255,255,255,.05);color:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.08)}
+.svc-desc{margin-top:18px;font-size:14px;color:rgba(255,255,255,.65);line-height:1.85}
+.pts{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-top:18px}
+.pt{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:12px 16px}
+.pt-l{font-size:10px;font-weight:700;color:var(--text-s);margin-bottom:5px;text-transform:uppercase;letter-spacing:.8px;font-family:'Inter',sans-serif}
+.pt-v{font-size:14px;font-weight:700;color:var(--white)}
+.ckl{list-style:none;padding:0;margin:16px 0}
+.ckl li{padding:6px 0 6px 24px;position:relative;font-size:14px;color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.03)}
+.ckl li:last-child{border-bottom:none}
+.ckl li::before{content:'✓';position:absolute;left:0;color:var(--teal-l);font-weight:900}
+.cta-row{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:6px;font-family:'Inter',sans-serif;font-size:13px;font-weight:700;padding:12px 26px;border-radius:10px;text-decoration:none;transition:all .2s}
+.btn-primary.amber-btn{background:var(--amber);color:var(--navy);box-shadow:0 3px 12px rgba(244,162,97,.3)}
+.btn-primary.amber-btn:hover{background:#F4B97A;transform:translateY(-1px)}
+.btn-outline{display:inline-flex;align-items:center;font-family:'Inter',sans-serif;font-size:13px;font-weight:700;padding:11px 22px;border-radius:10px;text-decoration:none;border:1px solid rgba(0,180,216,.3);color:var(--teal-l);transition:background .2s}
+.btn-outline:hover{background:rgba(0,180,216,.07)}
+
+.faq-list{margin-top:48px}
+.faq-item{border:1px solid rgba(255,255,255,.05);border-radius:14px;margin:12px 0;overflow:hidden;transition:border-color .3s}
+.faq-item:hover{border-color:rgba(0,180,216,.2)}
+.faq-q-wrap{padding:22px 24px;display:flex;align-items:flex-start;gap:14px}
+.faq-badge{background:rgba(0,180,216,.15);border:1px solid rgba(0,180,216,.25);color:var(--teal-l);font-family:'Inter',sans-serif;font-size:11px;font-weight:800;padding:3px 10px;border-radius:6px;flex-shrink:0;margin-top:1px}
+.faq-q-text{font-size:14px;font-weight:700;color:var(--white)}
+.faq-a{padding:0 24px 22px 52px;font-size:13px;color:var(--text-s);line-height:1.85}
+
+#footer-cta{padding:140px 24px;text-align:center;position:relative;z-index:1;background:radial-gradient(ellipse at 50% 100%,rgba(0,180,216,.12) 0%,var(--navy) 60%)}
+.fcta-inner{max-width:600px;margin:0 auto}
+.fcta-label{font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--teal);margin-bottom:20px}
+.fcta-h2{font-family:'Inter',sans-serif;font-size:clamp(32px,6vw,56px);font-weight:900;line-height:1.05;letter-spacing:-2px;color:var(--white);margin-bottom:18px}
+.fcta-h2 span{background:linear-gradient(90deg,var(--teal),var(--teal-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.fcta-sub{font-size:15px;color:var(--text-s);margin-bottom:36px;line-height:1.8}
+.fcta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.site-footer{background:#040810;text-align:center;padding:28px 24px;font-size:12px;color:rgba(255,255,255,.2);border-top:1px solid rgba(255,255,255,.04)}
+.site-footer a{color:rgba(0,180,216,.6);text-decoration:none}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}.reveal-delay-2{transition-delay:.2s}.reveal-delay-3{transition-delay:.3s}.reveal-delay-4{transition-delay:.4s}
+
+@media(max-width:680px){
+  .gnav-links{display:none}.cost-showcase{grid-template-columns:1fr}.vs-orb{display:none}
+  .cost-card.bad,.cost-card.good{transform:none}.problem-grid{grid-template-columns:1fr}
+  .step-grid{grid-template-columns:1fr 1fr;gap:20px}.step-grid::before{display:none}
+  .svc-card{padding:24px 18px}body{cursor:auto}#cursor,#cursor-ring{display:none}
+}
+</style>
+</head>
+<body>
+<div id="cursor"></div><div id="cursor-ring"></div>
+<canvas id="bg-canvas"></canvas>
+<nav class="gnav" id="gnav">
+  <a href="https://okinawa-pr.jp" class="gnav-logo">Influ<span>Compare</span></a>
+  <div class="gnav-links">
+    <a href="#cost">コスト比較</a><a href="#steps">移行方法</a><a href="#tools">ツール</a>
+    <a href="https://influbridge.jp/brand" class="gnav-cta">無料で始める →</a>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-badge reveal">広告費削減 × UGC集客 ガイド 2025</div>
+    <h1 class="hero-title">
+      <span class="l1 reveal">月5〜10万円の広告費を</span>
+      <span class="l2 reveal reveal-delay-1">ホットペッパーを</span>
+      <span class="l3 reveal reveal-delay-2">やめて集客する方法</span>
+    </h1>
+    <p class="hero-sub reveal reveal-delay-3">「効果がわからないのに毎月高い掲載費を払い続けている」「やめたら怖いけどこのままも怖い」── 沖縄の飲食店・美容室オーナーのための出口戦略を解説します。</p>
+    <div class="hero-actions reveal reveal-delay-4">
+      <a href="#cost" class="btn-glow primary">コストを比較する ↓</a>
+      <a href="https://influbridge.jp/brand" class="btn-glow ghost">無料で始める →</a>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- COST -->
+<section class="sec sec-dark" id="cost">
+  <div class="wrap">
+    <div class="section-eyebrow reveal">Cost Reality Check</div>
+    <h2 class="section-h2 reveal">ホットペッパーの年間コストを<br>直視してみよう</h2>
+    <p class="section-desc reveal">毎月払い続けている掲載費が、年間でどれくらいになるか確認してみてください。</p>
+    <div class="cost-showcase">
+      <div class="cost-card bad reveal">
+        <div class="cost-card-head">😰 ホットペッパー</div>
+        <div class="cost-big">月5万円</div>
+        <div class="cost-sub">プラン・エリアにより3〜10万円以上<br>やめたら集客がゼロになる</div>
+        <div class="cost-year">年間 60万円</div>
+      </div>
+      <div class="vs-orb">VS</div>
+      <div class="cost-card good reveal reveal-delay-2">
+        <div class="cost-card-head">✨ InfluBridge</div>
+        <div class="cost-big">月0円〜</div>
+        <div class="cost-sub">初期費用ゼロ・無料プランあり<br>投稿が資産として残り続ける</div>
+        <div class="cost-year">年間 0円〜</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMS -->
+<section class="sec sec-navy">
+  <div class="wrap">
+    <div class="section-eyebrow reveal">The Problem</div>
+    <h2 class="section-h2 reveal">ホットペッパー依存の<br>3つの構造的問題</h2>
+    <p class="section-desc reveal">やめたくてもやめられない理由があります。</p>
+    <div class="problem-grid">
+      <div class="problem-card reveal">
+        <div class="problem-num">01</div>
+        <div class="problem-title">やめた瞬間に集客がゼロになる</div>
+        <div class="problem-desc">ホットペッパーの掲載をやめると、そこからの新規客が一切来なくなります。自社に集客の仕組みがないので、やめるにやめられない心理的依存が生まれます。</div>
+      </div>
+      <div class="problem-card reveal reveal-delay-1">
+        <div class="problem-num">02</div>
+        <div class="problem-title">若い世代・観光客に届かない</div>
+        <div class="problem-desc">10〜30代はInstagram・TikTokでお店を探します。特に沖縄の観光客はSNSで「沖縄グルメ」を検索してお店を決める割合が急増。ホットペッパーを見ない層に広告費を払い続けている状態です。</div>
+      </div>
+      <div class="problem-card reveal reveal-delay-2">
+        <div class="problem-num">03</div>
+        <div class="problem-title">お客様データが手元に残らない</div>
+        <div class="problem-desc">ホットペッパー経由で来たお客様の情報はホットペッパーのデータです。自社の財産にならないため、やめるとその顧客との接点も失います。</div>
+      </div>
+      <div class="problem-card reveal reveal-delay-3">
+        <div class="problem-num">04</div>
+        <div class="problem-title">費用対効果が不透明</div>
+        <div class="problem-desc">毎月払っているが「ホットペッパー経由の来客が何人か」を正確に把握している店舗は意外と少ないです。費用対効果を検証しないまま払い続けているケースが多い。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="sec sec-dark" id="steps">
+  <div class="wrap">
+    <div class="section-eyebrow reveal">Migration Plan</div>
+    <h2 class="section-h2 reveal">段階的移行の4ステップ</h2>
+    <p class="section-desc reveal">いきなりやめるのではなく、並行して試してから段階的に移行します。</p>
+    <div class="step-grid reveal">
+      <div class="step-item">
+        <div class="step-circle">🧪<div class="step-num-badge">1</div></div>
+        <div class="step-title">並行して試す</div>
+        <div class="step-desc">ホットペッパーを続けながらInfluBridgeで1〜2件試す。費用ゼロ。</div>
+      </div>
+      <div class="step-item">
+        <div class="step-circle">📊<div class="step-num-badge">2</div></div>
+        <div class="step-title">効果を比較する</div>
+        <div class="step-desc">ホットペッパー経由 vs InfluBridge経由の来客数を比較。</div>
+      </div>
+      <div class="step-item">
+        <div class="step-circle">📈<div class="step-num-badge">3</div></div>
+        <div class="step-title">InfluBridgeを増やす</div>
+        <div class="step-desc">効果確認後、案件数を増やして口コミ資産を積み上げる。</div>
+      </div>
+      <div class="step-item">
+        <div class="step-circle">🏆<div class="step-num-badge">4</div></div>
+        <div class="step-title">段階的に移行</div>
+        <div class="step-desc">UGC集客が安定したらホットペッパーをダウングレード・解約。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TABLE -->
+<section class="sec sec-navy" id="tools">
+  <div class="wrap">
+    <div class="section-eyebrow reveal">Tool Comparison</div>
+    <h2 class="section-h2 reveal">ホットペッパー代替ツール比較</h2>
+    <div class="tbl-wrap reveal">
+      <table>
+        <thead><tr><th>サービス名</th><th>初期費用</th><th>月額料金</th><th>来店PR</th><th>沖縄対応</th><th>無料プラン</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td><strong>InfluBridge</strong><span class="badge">おすすめ</span></td><td>無料</td><td>無料〜</td><td class="ok">◎</td><td class="ok">◎</td><td class="ok">◎</td></tr>
+          <tr><td>トリドリマーケティング</td><td>無料</td><td>50,000円〜</td><td class="ok">◎</td><td class="ok">○</td><td class="no">×</td></tr>
+          <tr><td>INFLUFECT</td><td>200,000円</td><td>9,800円〜</td><td class="ok">○</td><td class="no">△</td><td class="no">×</td></tr>
+          <tr><td>Find Model</td><td>無料</td><td>無料</td><td class="ok">○</td><td class="no">△</td><td class="ok">○</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="svc-cards">
+      <div class="svc-card top reveal">
+        <div class="rank gold">🏆 ホットペッパー代替おすすめ No.1</div>
+        <div class="svc-head">
+          <div class="svc-logo l-ib">IB</div>
+          <div>
+            <div class="svc-name">InfluBridge</div>
+            <div class="svc-co">InfluBridge（日本市場向けSaaS・沖縄発）</div>
+            <div class="tags"><span class="tag teal">広告費ゼロ〜</span><span class="tag amber">初期費用無料</span><span class="tag teal">沖縄発</span></div>
+          </div>
+        </div>
+        <div class="svc-desc"><strong>ホットペッパーへの依存から脱却したい沖縄の飲食店・美容室・サロンに最適。</strong>案件を掲載するだけで地元クリエイターから応募が届き、来店→投稿→口コミ資産化の流れを作れます。初期費用ゼロで並行して試せます。</div>
+        <div class="pts">
+          <div class="pt"><div class="pt-l">初期費用</div><div class="pt-v">無料</div></div>
+          <div class="pt"><div class="pt-l">月額料金</div><div class="pt-v">無料プランあり</div></div>
+          <div class="pt"><div class="pt-l">対応SNS</div><div class="pt-v">IG/TikTok/YouTube</div></div>
+          <div class="pt"><div class="pt-l">来店PR</div><div class="pt-v">◎ 対応</div></div>
+        </div>
+        <ul class="ckl">
+          <li>ホットペッパーを続けながら並行して無料で試せる</li>
+          <li>沖縄在住クリエイターへのスカウトが可能</li>
+          <li>投稿がSNSに残り続けて資産として集客し続ける</li>
+          <li>若い世代・観光客へInstagram/TikTokで届く</li>
+        </ul>
+        <div class="cta-row">
+          <a href="https://influbridge.jp/brand" class="btn-primary amber-btn">無料で始める →</a>
+          <a href="https://influbridge.jp/lp/mayowanai" class="btn-outline">詳細を見る</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec-dark">
+  <div class="wrap">
+    <div class="section-eyebrow reveal">FAQ</div>
+    <h2 class="section-h2 reveal">よくある質問</h2>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <div class="faq-q-wrap"><span class="faq-badge">Q</span><div class="faq-q-text">ホットペッパーをやめていきなり集客がゼロにならないですか？</div></div>
+        <div class="faq-a">いきなりやめるのではなく、InfluBridgeで並行して口コミを積み上げてから段階的に移行するのがおすすめです。InfluBridgeは初期費用ゼロなのでリスクなく試せます。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q-wrap"><span class="faq-badge">Q</span><div class="faq-q-text">広告費ゼロで集客できますか？</div></div>
+        <div class="faq-a">はい。来店型UGCでは、食事・施術の無料提供のみで依頼できるケースが多く、実質的に広告費ゼロで始められます。InfluBridgeの無料プランを使えば月額費用もかかりません。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q-wrap"><span class="faq-badge">Q</span><div class="faq-q-text">沖縄の飲食店でホットペッパー以外の集客方法はありますか？</div></div>
+        <div class="faq-a">InfluBridgeを使った来店型UGCマーケティングがおすすめです。沖縄在住クリエイターに来店・投稿してもらうことで、地元客・観光客の両方へのリーチが可能です。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="footer-cta">
+  <div class="fcta-inner">
+    <div class="fcta-label reveal">Start Your Migration</div>
+    <h2 class="fcta-h2 reveal">広告費を削減して、<br><span>口コミ資産</span>を作ろう</h2>
+    <p class="fcta-sub reveal">InfluBridgeで沖縄の集客を変える。初期費用ゼロ・ホットペッパーと並行して試せます。</p>
+    <div class="fcta-actions reveal">
+      <a href="https://influbridge.jp/brand" class="btn-glow primary">無料で始める →</a>
+      <a href="https://influbridge.jp/lp/mayowanai" class="btn-glow ghost">詳細を見る</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>© 2025 InfluCompare — UGC集客・インフルエンサーツール比較メディア | <a href="https://okinawa-pr.jp">okinawa-pr.jp</a></p>
+  <p style="margin-top:4px">※本記事は公開情報をもとに編集部が作成。最新情報は各公式サイトでご確認ください。</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){const canvas=document.getElementById('bg-canvas');const renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true});renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));renderer.setSize(window.innerWidth,window.innerHeight);const scene=new THREE.Scene();const camera=new THREE.PerspectiveCamera(60,window.innerWidth/window.innerHeight,0.1,2000);camera.position.set(0,0,120);const count=2500;const pos=new Float32Array(count*3);const col=new Float32Array(count*3);const sz=new Float32Array(count);const c1=new THREE.Color(0x00B4D8),c2=new THREE.Color(0xF4A261),c3=new THREE.Color(0xFC8181);for(let i=0;i<count;i++){const theta=Math.random()*Math.PI*2;const phi=Math.acos(2*Math.random()-1);const r=80+Math.random()*120;pos[i*3]=r*Math.sin(phi)*Math.cos(theta);pos[i*3+1]=r*Math.sin(phi)*Math.sin(theta)*.5;pos[i*3+2]=r*Math.cos(phi);const m=Math.random();const c=m<.5?c1:m<.75?c2:c3;col[i*3]=c.r;col[i*3+1]=c.g;col[i*3+2]=c.b;sz[i]=Math.random()*2+.5;}const geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.BufferAttribute(pos,3));geo.setAttribute('vCol',new THREE.BufferAttribute(col,3));geo.setAttribute('size',new THREE.BufferAttribute(sz,1));const mat=new THREE.ShaderMaterial({vertexShader:`attribute float size;attribute vec3 vCol;varying vec3 vColor;varying float vAlpha;void main(){vColor=vCol;vec4 mv=modelViewMatrix*vec4(position,1.0);gl_PointSize=size*(200.0/-mv.z);gl_Position=projectionMatrix*mv;vAlpha=smoothstep(200.0,80.0,-mv.z);}`,fragmentShader:`varying vec3 vColor;varying float vAlpha;void main(){float d=length(gl_PointCoord-vec2(.5));if(d>.5)discard;float alpha=(1.0-d*2.0)*vAlpha*.7;gl_FragColor=vec4(vColor,alpha);}`,transparent:true,depthWrite:false,vertexColors:true,blending:THREE.AdditiveBlending});const particles=new THREE.Points(geo,mat);scene.add(particles);let mx=0,my=0,scrollY=0;window.addEventListener('mousemove',e=>{mx=(e.clientX/window.innerWidth-.5)*.5;my=(e.clientY/window.innerHeight-.5)*.5;});window.addEventListener('scroll',()=>scrollY=window.scrollY);window.addEventListener('resize',()=>{camera.aspect=window.innerWidth/window.innerHeight;camera.updateProjectionMatrix();renderer.setSize(window.innerWidth,window.innerHeight);});let t=0;function animate(){requestAnimationFrame(animate);t+=.003;particles.rotation.y=t*.08+mx*.4;particles.rotation.x=Math.sin(t*.2)*.04-my*.2;camera.position.y=-scrollY*.02;particles.scale.setScalar(1+Math.sin(t*.5)*.015);renderer.render(scene,camera);}animate();})();
+(function(){const cursor=document.getElementById('cursor');const ring=document.getElementById('cursor-ring');let rx=0,ry=0;window.addEventListener('mousemove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px';rx+=(e.clientX-rx)*.12;ry+=(e.clientY-ry)*.12;});function lag(){ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(lag);}lag();})();
+window.addEventListener('scroll',()=>document.getElementById('gnav').classList.toggle('scrolled',window.scrollY>60));
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

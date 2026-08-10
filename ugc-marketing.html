@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UGCマーケティングとは？口コミを資産に変える方法【2025年】沖縄対応 | InfluCompare</title>
+<meta name="description" content="UGCマーケティングで口コミ集客する方法を解説。広告費ゼロで投稿が資産として残る仕組みを、沖縄の小規模飲食店・サロン向けに比較・紹介します。">
+<link rel="canonical" href="https://okinawa-pr.jp/ugc-marketing">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"UGCマーケティングとは何ですか？","acceptedAnswer":{"@type":"Answer","text":"UGC（User Generated Content）マーケティングとは、一般ユーザーが作成した投稿・口コミ・レビューを活用して集客する手法です。広告より信頼されやすく、投稿が資産として残り続ける特徴があります。"}},{"@type":"Question","name":"小規模店舗でもUGCマーケティングはできますか？","acceptedAnswer":{"@type":"Answer","text":"はい。InfluBridgeなら初期費用ゼロで始められます。地域密着のリアルな口コミは大手広告より信頼されやすいです。"}},{"@type":"Question","name":"沖縄の店舗でUGCマーケティングは効果がありますか？","acceptedAnswer":{"@type":"Answer","text":"非常に効果的です。沖縄は観光客・移住者・地元民が混在しており、地元の人が紹介するお店は観光客にも強く信頼されます。"}}]}</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Inter:wght@400;700;800;900&display=swap');
+
+:root {
+  --navy:   #080F1A;
+  --navy2:  #0D1B2E;
+  --teal:   #00B4D8;
+  --teal-l: #48CAE4;
+  --teal-p: #CAF0F8;
+  --amber:  #F4A261;
+  --white:  #FFFFFF;
+  --text-s: #90A4B4;
+  --border: rgba(0,180,216,.15);
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: var(--navy);
+  color: var(--white);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ===== CUSTOM CURSOR ===== */
+#cursor {
+  position: fixed;
+  width: 12px; height: 12px;
+  background: var(--teal);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%,-50%);
+  transition: transform .1s, width .2s, height .2s, background .2s;
+  mix-blend-mode: screen;
+}
+#cursor-ring {
+  position: fixed;
+  width: 36px; height: 36px;
+  border: 1.5px solid rgba(0,180,216,.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%,-50%);
+  transition: transform .12s ease-out, width .2s, height .2s;
+}
+body:has(a:hover) #cursor { width:20px; height:20px; background: var(--amber); }
+body:has(a:hover) #cursor-ring { width:52px; height:52px; border-color: rgba(244,162,97,.4); }
+
+/* ===== CANVAS ===== */
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ===== NAV ===== */
+.gnav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background .3s, backdrop-filter .3s;
+}
+.gnav.scrolled {
+  background: rgba(8,15,26,.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+.gnav-logo {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--white);
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+.gnav-logo span { color: var(--teal-l); }
+.gnav-links { display: flex; align-items: center; gap: 28px; }
+.gnav-links a {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-s);
+  text-decoration: none;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  transition: color .2s;
+}
+.gnav-links a:hover { color: var(--teal-l); }
+.gnav-cta {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: var(--navy) !important;
+  background: var(--teal);
+  padding: 9px 20px !important;
+  border-radius: 8px;
+  transition: background .2s, transform .15s !important;
+}
+.gnav-cta:hover { background: var(--teal-l) !important; transform: translateY(-1px) !important; color: var(--navy) !important; }
+
+/* ===== SECTIONS ===== */
+section {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== HERO ===== */
+#hero {
+  perspective: 1000px;
+  overflow: hidden;
+}
+.hero-content {
+  text-align: center;
+  transform-style: preserve-3d;
+  padding: 0 24px;
+  max-width: 900px;
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(0,180,216,.12);
+  border: 1px solid rgba(0,180,216,.3);
+  color: var(--teal-l);
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 100px;
+  margin-bottom: 28px;
+}
+.hero-title {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(44px, 9vw, 96px);
+  font-weight: 900;
+  line-height: .95;
+  letter-spacing: -3px;
+  margin-bottom: 28px;
+}
+.hero-title .line1 { display: block; color: var(--white); }
+.hero-title .line2 {
+  display: block;
+  background: linear-gradient(90deg, var(--teal), var(--teal-l), #90E0EF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+  background-size: 200% auto;
+}
+@keyframes shimmer {
+  from { background-position: 0% center; }
+  to   { background-position: 200% center; }
+}
+.hero-title .line3 { display: block; color: rgba(255,255,255,.25); font-size: .55em; letter-spacing: -1px; margin-top: 8px; }
+.hero-sub {
+  font-size: 16px;
+  color: var(--text-s);
+  line-height: 1.9;
+  max-width: 520px;
+  margin: 0 auto 36px;
+}
+.hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.btn-glow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 15px 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all .2s;
+  position: relative;
+}
+.btn-glow.primary {
+  background: var(--teal);
+  color: var(--navy);
+  box-shadow: 0 0 24px rgba(0,180,216,.4), 0 4px 16px rgba(0,180,216,.2);
+}
+.btn-glow.primary:hover {
+  background: var(--teal-l);
+  box-shadow: 0 0 40px rgba(0,180,216,.6), 0 8px 24px rgba(0,180,216,.3);
+  transform: translateY(-2px);
+}
+.btn-glow.ghost {
+  border: 1px solid rgba(255,255,255,.15);
+  color: rgba(255,255,255,.7);
+}
+.btn-glow.ghost:hover { background: rgba(255,255,255,.05); transform: translateY(-1px); }
+
+.scroll-hint {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,.25);
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.scroll-line {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, rgba(0,180,216,.5), transparent);
+  animation: scroll-anim 2s ease-in-out infinite;
+}
+@keyframes scroll-anim {
+  0%,100% { opacity: 1; transform: scaleY(1); }
+  50%      { opacity: .4; transform: scaleY(.6); }
+}
+
+/* ===== WHAT IS UGC ===== */
+#what {
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy2) 100%);
+  padding: 120px 24px;
+  min-height: auto;
+}
+.what-inner { max-width: 900px; margin: 0 auto; width: 100%; }
+.section-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 16px;
+}
+.section-h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.section-desc {
+  font-size: 15px;
+  color: var(--text-s);
+  line-height: 1.9;
+  max-width: 600px;
+  margin-bottom: 56px;
+}
+
+/* 3D CARD GRID */
+.card-3d-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  perspective: 1200px;
+}
+.card-3d {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(0,180,216,.12);
+  border-radius: 20px;
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.card-3d::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(0,180,216,.08) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity .3s;
+  border-radius: inherit;
+}
+.card-3d:hover::before { opacity: 1; }
+.card-3d:hover {
+  box-shadow: 0 20px 60px rgba(0,180,216,.15), 0 0 0 1px rgba(0,180,216,.2);
+}
+.card-3d-icon {
+  font-size: 40px;
+  margin-bottom: 18px;
+  display: block;
+  transform: translateZ(20px);
+}
+.card-3d-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 10px;
+  letter-spacing: -.3px;
+}
+.card-3d-desc {
+  font-size: 13px;
+  color: var(--text-s);
+  line-height: 1.75;
+}
+.card-3d-num {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-family: 'Inter', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: rgba(0,180,216,.06);
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+/* ===== STATS SECTION ===== */
+#stats {
+  padding: 120px 24px;
+  min-height: auto;
+  background: var(--navy2);
+  position: relative;
+  overflow: hidden;
+}
+#stats::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0,180,216,.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.stats-inner { max-width: 900px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-top: 56px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.stat-item {
+  padding: 40px 24px;
+  text-align: center;
+  background: rgba(255,255,255,.02);
+  position: relative;
+  overflow: hidden;
+  transition: background .3s;
+}
+.stat-item:hover { background: rgba(0,180,216,.05); }
+.stat-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 10%; right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--teal), transparent);
+  opacity: 0;
+  transition: opacity .3s;
+}
+.stat-item:hover::after { opacity: 1; }
+.stat-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 52px;
+  font-weight: 900;
+  color: var(--teal-l);
+  line-height: 1;
+  margin-bottom: 10px;
+  letter-spacing: -2px;
+}
+.stat-label { font-size: 12px; color: var(--text-s); line-height: 1.6; }
+
+/* ===== COMPARE SECTION ===== */
+#compare {
+  padding: 120px 24px;
+  min-height: auto;
+  background: var(--navy);
+}
+.compare-inner { max-width: 900px; margin: 0 auto; width: 100%; }
+.compare-3d-wrap {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 24px;
+  align-items: center;
+  margin-top: 56px;
+  perspective: 1000px;
+}
+.compare-card {
+  border-radius: 20px;
+  padding: 36px 28px;
+  transition: transform .4s cubic-bezier(.2,.8,.2,1);
+}
+.compare-card.bad {
+  background: linear-gradient(135deg, rgba(239,68,68,.08) 0%, rgba(239,68,68,.03) 100%);
+  border: 1px solid rgba(239,68,68,.2);
+  transform: perspective(800px) rotateY(8deg);
+}
+.compare-card.bad:hover { transform: perspective(800px) rotateY(2deg) translateY(-4px); }
+.compare-card.good {
+  background: linear-gradient(135deg, rgba(0,180,216,.1) 0%, rgba(0,180,216,.04) 100%);
+  border: 1px solid rgba(0,180,216,.25);
+  transform: perspective(800px) rotateY(-8deg);
+}
+.compare-card.good:hover { transform: perspective(800px) rotateY(-2deg) translateY(-4px); }
+.compare-head {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.compare-card.bad  .compare-head { color: #FC8181; }
+.compare-card.good .compare-head { color: var(--teal-l); }
+.compare-list { list-style: none; }
+.compare-list li {
+  font-size: 13px;
+  color: rgba(255,255,255,.7);
+  padding: 7px 0 7px 22px;
+  position: relative;
+  border-bottom: 1px solid rgba(255,255,255,.04);
+}
+.compare-list li:last-child { border-bottom: none; }
+.compare-card.bad  .compare-list li::before { content: '✗'; position:absolute; left:0; color:#FC8181; font-weight:900; }
+.compare-card.good .compare-list li::before { content: '✓'; position:absolute; left:0; color:var(--teal-l); font-weight:900; }
+.vs-orb {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--navy), var(--navy2));
+  border: 1px solid rgba(255,255,255,.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  color: rgba(255,255,255,.6);
+  flex-shrink: 0;
+  box-shadow: 0 0 24px rgba(0,180,216,.15);
+}
+
+/* ===== FLOW SECTION ===== */
+#flow {
+  padding: 120px 24px;
+  min-height: auto;
+  background: linear-gradient(180deg, var(--navy) 0%, #060C15 100%);
+  overflow: hidden;
+}
+.flow-inner { max-width: 900px; margin: 0 auto; width: 100%; }
+.flow-3d-container {
+  position: relative;
+  margin-top: 60px;
+  perspective: 1200px;
+}
+.flow-3d-track {
+  display: flex;
+  gap: 0;
+  transform-style: preserve-3d;
+}
+.flow-3d-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 12px;
+  position: relative;
+  transition: transform .3s;
+}
+.flow-3d-step:hover { transform: translateY(-8px) translateZ(20px); }
+.flow-orb-wrap {
+  position: relative;
+  margin-bottom: 20px;
+}
+.flow-orb {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, rgba(0,180,216,.3), rgba(0,80,120,.15));
+  border: 1.5px solid var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  position: relative;
+  box-shadow:
+    0 0 20px rgba(0,180,216,.2),
+    inset 0 0 20px rgba(0,180,216,.05);
+  animation: pulse-orb 3s ease-in-out infinite;
+}
+.flow-3d-step:nth-child(2) .flow-orb { animation-delay: .4s; }
+.flow-3d-step:nth-child(3) .flow-orb { animation-delay: .8s; }
+.flow-3d-step:nth-child(4) .flow-orb { animation-delay: 1.2s; }
+.flow-3d-step:nth-child(5) .flow-orb { animation-delay: 1.6s; }
+@keyframes pulse-orb {
+  0%,100% { box-shadow: 0 0 20px rgba(0,180,216,.2), inset 0 0 20px rgba(0,180,216,.05); }
+  50%      { box-shadow: 0 0 40px rgba(0,180,216,.4), inset 0 0 30px rgba(0,180,216,.1); }
+}
+.flow-step-badge {
+  position: absolute;
+  top: -4px; right: -4px;
+  width: 22px; height: 22px;
+  background: var(--teal);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--navy);
+}
+.flow-connector {
+  position: absolute;
+  top: 36px;
+  left: calc(50% + 36px);
+  right: calc(-50% + 36px);
+  height: 1.5px;
+  background: linear-gradient(90deg, var(--teal), rgba(0,180,216,.2));
+}
+.flow-step-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+.flow-step-sub {
+  font-size: 11px;
+  color: var(--text-s);
+  line-height: 1.6;
+}
+.flow-result {
+  margin-top: 48px;
+  background: linear-gradient(135deg, rgba(0,180,216,.08), rgba(0,180,216,.03));
+  border: 1px solid rgba(0,180,216,.2);
+  border-radius: 16px;
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.flow-result-emoji { font-size: 30px; flex-shrink: 0; }
+.flow-result-text { font-size: 14px; color: rgba(255,255,255,.7); line-height: 1.75; }
+.flow-result-text strong { color: var(--teal-l); }
+
+/* ===== TABLE SECTION ===== */
+#table-sec {
+  padding: 120px 24px;
+  min-height: auto;
+  background: var(--navy2);
+}
+.table-inner { max-width: 900px; margin: 0 auto; width: 100%; }
+.tbl-wrap {
+  overflow-x: auto;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  margin-top: 48px;
+  box-shadow: 0 8px 40px rgba(0,0,0,.3);
+}
+table { width:100%; border-collapse:collapse; font-size:13px; min-width:560px; }
+th {
+  background: rgba(0,180,216,.1);
+  color: var(--teal-l);
+  padding: 14px 18px;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--border);
+}
+td {
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255,255,255,.04);
+  color: rgba(255,255,255,.8);
+}
+tr:last-child td { border-bottom: none; }
+tr.hl td { background: rgba(0,180,216,.06); }
+tr.hl td:first-child { border-left: 2px solid var(--teal); }
+tr:not(.hl):hover td { background: rgba(255,255,255,.02); }
+.badge {
+  display: inline-block;
+  background: var(--amber);
+  color: var(--navy);
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 6px;
+  vertical-align: middle;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+.ok { color: var(--teal-l); font-weight: 700; }
+.no { color: rgba(255,255,255,.2); }
+
+/* ===== SERVICE CARDS SECTION ===== */
+#services {
+  padding: 120px 24px;
+  min-height: auto;
+  background: var(--navy);
+}
+.services-inner { max-width: 900px; margin: 0 auto; width: 100%; }
+.svc-cards { margin-top: 48px; }
+.svc-card {
+  background: rgba(255,255,255,.025);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 20px;
+  padding: 36px;
+  margin: 20px 0;
+  position: relative;
+  transition: border-color .3s, box-shadow .3s, transform .3s;
+}
+.svc-card:hover {
+  border-color: rgba(0,180,216,.2);
+  box-shadow: 0 12px 48px rgba(0,180,216,.08);
+  transform: translateY(-2px);
+}
+.svc-card.top {
+  border-color: rgba(244,162,97,.3);
+  background: linear-gradient(135deg, rgba(244,162,97,.05), rgba(255,255,255,.02));
+  box-shadow: 0 4px 32px rgba(244,162,97,.1);
+}
+.svc-card.top:hover { transform: translateY(-4px); box-shadow: 0 16px 56px rgba(244,162,97,.14); }
+.rank {
+  position: absolute;
+  top: -1px; left: 28px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.1);
+  border-top: none;
+  color: rgba(255,255,255,.6);
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 0 0 8px 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.rank.gold { background: rgba(244,162,97,.15); border-color: rgba(244,162,97,.3); color: var(--amber); }
+.svc-head { display: flex; align-items: flex-start; gap: 18px; margin-top: 18px; }
+.svc-logo {
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 13px;
+  color: var(--white);
+}
+.l-ib { background: linear-gradient(135deg, #0D1B2E, #0891B2); border: 1px solid rgba(0,180,216,.3); }
+.l-tr { background: linear-gradient(135deg, #300808, #991B1B); }
+.l-if { background: linear-gradient(135deg, #082808, #166534); }
+.l-fm { background: linear-gradient(135deg, #081428, #1D4ED8); }
+.svc-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -.5px;
+}
+.svc-co { font-size: 12px; color: var(--text-s); margin-top: 3px; }
+.tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 6px;
+  letter-spacing: .3px;
+}
+.tag.teal  { background: rgba(0,180,216,.12); color: var(--teal-l); border: 1px solid rgba(0,180,216,.2); }
+.tag.amber { background: rgba(244,162,97,.12); color: var(--amber); border: 1px solid rgba(244,162,97,.2); }
+.tag.gray  { background: rgba(255,255,255,.05); color: rgba(255,255,255,.5); border: 1px solid rgba(255,255,255,.08); }
+.svc-desc { margin-top: 18px; font-size: 14px; color: rgba(255,255,255,.65); line-height: 1.85; }
+.pts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+.pt {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+.pt-l { font-size: 10px; font-weight: 700; color: var(--text-s); margin-bottom: 5px; text-transform: uppercase; letter-spacing: .8px; font-family: 'Inter', sans-serif; }
+.pt-v { font-size: 14px; font-weight: 700; color: var(--white); }
+.ckl { list-style: none; padding: 0; margin: 16px 0; }
+.ckl li {
+  padding: 6px 0 6px 24px;
+  position: relative;
+  font-size: 14px;
+  color: rgba(255,255,255,.7);
+  border-bottom: 1px solid rgba(255,255,255,.03);
+}
+.ckl li:last-child { border-bottom: none; }
+.ckl li::before { content: '✓'; position: absolute; left: 0; color: var(--teal-l); font-weight: 900; }
+.cta-row { margin-top: 22px; display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 12px 26px;
+  border-radius: 10px;
+  text-decoration: none;
+  background: var(--teal);
+  color: var(--navy);
+  transition: all .2s;
+  box-shadow: 0 3px 12px rgba(0,180,216,.3);
+}
+.btn-primary:hover { background: var(--teal-l); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,180,216,.4); }
+.btn-primary.amber-btn { background: var(--amber); color: var(--navy); box-shadow: 0 3px 12px rgba(244,162,97,.3); }
+.btn-primary.amber-btn:hover { background: #F4B97A; box-shadow: 0 6px 20px rgba(244,162,97,.4); }
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 11px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 1px solid rgba(0,180,216,.3);
+  color: var(--teal-l);
+  transition: background .2s;
+}
+.btn-outline:hover { background: rgba(0,180,216,.07); }
+
+/* ===== OKINAWA SECTION ===== */
+#okinawa {
+  padding: 120px 24px;
+  min-height: auto;
+  background: var(--navy2);
+  position: relative;
+  overflow: hidden;
+}
+#okinawa::before {
+  content: '';
+  position: absolute;
+  bottom: -100px; right: -100px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(0,180,216,.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.oki-inner { max-width: 900px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
+.oki-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 48px;
+}
+.oki-card {
+  background: rgba(255,255,255,.025);
+  border: 1px solid rgba(0,180,216,.1);
+  border-radius: 16px;
+  padding: 28px;
+  transition: border-color .3s, background .3s, transform .3s;
+}
+.oki-card:hover {
+  border-color: rgba(0,180,216,.25);
+  background: rgba(0,180,216,.04);
+  transform: translateY(-4px);
+}
+.oki-emoji { font-size: 32px; margin-bottom: 12px; display: block; }
+.oki-title { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+.oki-desc { font-size: 13px; color: var(--text-s); line-height: 1.75; }
+
+/* ===== FAQ ===== */
+#faq {
+  padding: 120px 24px;
+  min-height: auto;
+  background: var(--navy);
+}
+.faq-inner { max-width: 900px; margin: 0 auto; width: 100%; }
+.faq-list { margin-top: 48px; }
+.faq-item {
+  border: 1px solid rgba(255,255,255,.05);
+  border-radius: 14px;
+  margin: 12px 0;
+  overflow: hidden;
+  transition: border-color .3s;
+}
+.faq-item:hover { border-color: rgba(0,180,216,.2); }
+.faq-q-wrap {
+  padding: 22px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.faq-badge {
+  background: rgba(0,180,216,.15);
+  border: 1px solid rgba(0,180,216,.25);
+  color: var(--teal-l);
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.faq-q-text { font-size: 14px; font-weight: 700; color: var(--white); }
+.faq-a {
+  padding: 0 24px 22px 52px;
+  font-size: 13px;
+  color: var(--text-s);
+  line-height: 1.85;
+}
+
+/* ===== FOOTER CTA ===== */
+#footer-cta {
+  padding: 140px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% 100%, rgba(0,180,216,.12) 0%, var(--navy) 60%);
+}
+#footer-cta::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 800px; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--teal), transparent);
+  opacity: .4;
+}
+.fcta-inner { max-width: 600px; margin: 0 auto; position: relative; z-index: 1; }
+.fcta-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 20px;
+}
+.fcta-h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(32px, 6vw, 56px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  color: var(--white);
+  margin-bottom: 18px;
+}
+.fcta-h2 span {
+  background: linear-gradient(90deg, var(--teal), var(--teal-l));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.fcta-sub { font-size: 15px; color: var(--text-s); margin-bottom: 36px; line-height: 1.8; }
+.fcta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* ===== SITE FOOTER ===== */
+.site-footer {
+  background: #040810;
+  text-align: center;
+  padding: 28px 24px;
+  font-size: 12px;
+  color: rgba(255,255,255,.2);
+  border-top: 1px solid rgba(255,255,255,.04);
+}
+.site-footer a { color: rgba(0,180,216,.6); text-decoration: none; }
+
+/* ===== REVEAL ANIMATIONS ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .2s; }
+.reveal-delay-3 { transition-delay: .3s; }
+.reveal-delay-4 { transition-delay: .4s; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 680px) {
+  .gnav-links { display: none; }
+  .hero-title { letter-spacing: -1.5px; }
+  .card-3d-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .compare-3d-wrap { grid-template-columns: 1fr; }
+  .vs-orb { display: none; }
+  .compare-card.bad  { transform: none; }
+  .compare-card.good { transform: none; }
+  .flow-3d-track { flex-direction: column; gap: 16px; }
+  .flow-connector { display: none; }
+  .oki-grid { grid-template-columns: 1fr; }
+  .svc-card { padding: 24px 18px; }
+  body { cursor: auto; }
+  #cursor, #cursor-ring { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- THREE.JS CANVAS -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- NAV -->
+<nav class="gnav" id="gnav">
+  <a href="https://okinawa-pr.jp" class="gnav-logo">Influ<span>Compare</span></a>
+  <div class="gnav-links">
+    <a href="#what">UGCとは</a>
+    <a href="#compare">比較</a>
+    <a href="#services">ツール</a>
+    <a href="#okinawa">沖縄</a>
+    <a href="https://influbridge.jp/brand" class="gnav-cta">無料で始める →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-badge reveal">UGC Marketing Guide 2025</div>
+    <h1 class="hero-title">
+      <span class="line1 reveal reveal-delay-1">口コミを</span>
+      <span class="line2 reveal reveal-delay-2">「資産」に変える</span>
+      <span class="line3 reveal reveal-delay-3">UGCマーケティングとは何か</span>
+    </h1>
+    <p class="hero-sub reveal reveal-delay-4">
+      広告費をかけなくても、一般のお客さんの投稿が最強の集客ツールになる時代。沖縄の飲食店・サロン・観光施設がUGCマーケティングを始める方法を解説します。
+    </p>
+    <div class="hero-actions reveal reveal-delay-4">
+      <a href="https://influbridge.jp/brand" class="btn-glow primary">無料で始める →</a>
+      <a href="#what" class="btn-glow ghost">詳しく見る ↓</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- WHAT IS UGC -->
+<section id="what">
+  <div class="what-inner">
+    <div class="section-eyebrow reveal">What is UGC</div>
+    <h2 class="section-h2 reveal">UGCマーケティングとは</h2>
+    <p class="section-desc reveal">UGC（User Generated Content）とは「ユーザーが作るコンテンツ」のことです。インスタグラムへの料理写真、Googleの口コミ、TikTokの体験動画など、企業ではなく一般のお客さんが作るコンテンツすべてがUGCです。</p>
+
+    <div class="card-3d-grid">
+      <div class="card-3d reveal reveal-delay-1">
+        <span class="card-3d-icon">📱</span>
+        <div class="card-3d-title">SNS投稿・リール・TikTok</div>
+        <div class="card-3d-desc">お客さんがお店の料理や空間を投稿。フォロワーに自然な形で広まり、拡散される。</div>
+        <div class="card-3d-num">01</div>
+      </div>
+      <div class="card-3d reveal reveal-delay-2">
+        <span class="card-3d-icon">⭐</span>
+        <div class="card-3d-title">Googleマップの口コミ</div>
+        <div class="card-3d-desc">来店後のリアルなレビューが検索結果に表示され、新規客の来店決定を後押しする。</div>
+        <div class="card-3d-num">02</div>
+      </div>
+      <div class="card-3d reveal reveal-delay-3">
+        <span class="card-3d-icon">🏷️</span>
+        <div class="card-3d-title">ハッシュタグ・タグ付け</div>
+        <div class="card-3d-desc">#沖縄グルメ などで投稿が拡散され、フォロワー外の人にも届く強力な波及効果。</div>
+        <div class="card-3d-num">03</div>
+      </div>
+      <div class="card-3d reveal reveal-delay-4">
+        <span class="card-3d-icon">🔁</span>
+        <div class="card-3d-title">ストーリーズ・リポスト</div>
+        <div class="card-3d-desc">お客さんの投稿をリポストすることで信頼感が増し、さらなる投稿を促す好循環が生まれる。</div>
+        <div class="card-3d-num">04</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="stats-inner">
+    <div class="section-eyebrow reveal">Data & Numbers</div>
+    <h2 class="section-h2 reveal">なぜ今UGCが最強なのか</h2>
+    <p class="section-desc reveal">消費者の購買行動が根本から変わっています。若い世代は広告より一般ユーザーの投稿・口コミを信頼します。</p>
+    <div class="stats-grid reveal">
+      <div class="stat-item">
+        <div class="stat-num">79%</div>
+        <div class="stat-label">消費者がUGCは購買判断に大きく影響すると回答</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">3-5×</div>
+        <div class="stat-label">UGCの広告比エンゲージメント率の高さ</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">90%+</div>
+        <div class="stat-label">10〜30代がSNSで旅行先のお店を探す割合</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">∞</div>
+        <div class="stat-label">投稿が残り続ける期間。広告と違いやめても消えない</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section id="compare">
+  <div class="compare-inner">
+    <div class="section-eyebrow reveal">Comparison</div>
+    <h2 class="section-h2 reveal">広告 vs UGC</h2>
+    <p class="section-desc reveal">毎月高い広告費を払い続けるか、口コミ資産を積み上げるか。</p>
+    <div class="compare-3d-wrap">
+      <div class="compare-card bad reveal">
+        <div class="compare-head">😰 従来の広告・ホットペッパー</div>
+        <ul class="compare-list">
+          <li>月3〜10万円以上かかり続ける</li>
+          <li>やめた瞬間に集客がゼロになる</li>
+          <li>広告感があり信頼されにくい</li>
+          <li>若い世代・観光客に届きにくい</li>
+          <li>お客様データが手元に残らない</li>
+          <li>費用対効果が不透明</li>
+        </ul>
+      </div>
+      <div class="vs-orb">VS</div>
+      <div class="compare-card good reveal">
+        <div class="compare-head">✨ UGCマーケティング</div>
+        <ul class="compare-list">
+          <li>初期費用ゼロ〜低コストで始められる</li>
+          <li>投稿が資産として残り続ける</li>
+          <li>リアルな口コミとして信頼される</li>
+          <li>Instagram・TikTokで若者・観光客に届く</li>
+          <li>口コミ資産が積み上がっていく</li>
+          <li>AIにも引用されやすくなる</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section id="flow">
+  <div class="flow-inner">
+    <div class="section-eyebrow reveal">The System</div>
+    <h2 class="section-h2 reveal">口コミが「資産」になる仕組み</h2>
+    <p class="section-desc reveal">InfluBridgeを使えば、来店→投稿→資産化のフローを自動化できます。</p>
+
+    <div class="flow-3d-container reveal">
+      <div class="flow-3d-track">
+        <div class="flow-3d-step">
+          <div class="flow-orb-wrap">
+            <div class="flow-orb">🏪<div class="flow-step-badge">1</div></div>
+            <div class="flow-connector"></div>
+          </div>
+          <div class="flow-step-title">案件を掲載</div>
+          <div class="flow-step-sub">InfluBridgeで来店PR案件を登録</div>
+        </div>
+        <div class="flow-3d-step">
+          <div class="flow-orb-wrap">
+            <div class="flow-orb">🤝<div class="flow-step-badge">2</div></div>
+            <div class="flow-connector"></div>
+          </div>
+          <div class="flow-step-title">マッチング</div>
+          <div class="flow-step-sub">地元クリエイターから応募が届く</div>
+        </div>
+        <div class="flow-3d-step">
+          <div class="flow-orb-wrap">
+            <div class="flow-orb">📸<div class="flow-step-badge">3</div></div>
+            <div class="flow-connector"></div>
+          </div>
+          <div class="flow-step-title">来店・投稿</div>
+          <div class="flow-step-sub">体験してSNSに投稿してもらう</div>
+        </div>
+        <div class="flow-3d-step">
+          <div class="flow-orb-wrap">
+            <div class="flow-orb">📢<div class="flow-step-badge">4</div></div>
+            <div class="flow-connector"></div>
+          </div>
+          <div class="flow-step-title">拡散・保存</div>
+          <div class="flow-step-sub">フォロワーに届き保存・シェアされる</div>
+        </div>
+        <div class="flow-3d-step">
+          <div class="flow-orb-wrap">
+            <div class="flow-orb">🏆<div class="flow-step-badge">5</div></div>
+          </div>
+          <div class="flow-step-title">資産として残る</div>
+          <div class="flow-step-sub">投稿は消えず集客し続ける</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flow-result reveal">
+      <div class="flow-result-emoji">💡</div>
+      <div class="flow-result-text">広告費をやめても投稿は残る。<strong>1本の投稿が1年後も新規客を連れてくる</strong>のがUGCの最大の強みです。</div>
+    </div>
+  </div>
+</section>
+
+<!-- TABLE -->
+<section id="table-sec">
+  <div class="table-inner">
+    <div class="section-eyebrow reveal">Tool Comparison</div>
+    <h2 class="section-h2 reveal">UGCツール比較表</h2>
+    <p class="section-desc reveal">沖縄の小規模店舗向けに主要ツールを比較しました。</p>
+    <div class="tbl-wrap reveal">
+      <table>
+        <thead>
+          <tr>
+            <th>サービス名</th><th>初期費用</th><th>月額料金</th>
+            <th>UGC特化</th><th>来店PR</th><th>沖縄対応</th><th>無料プラン</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hl">
+            <td><strong>InfluBridge</strong><span class="badge">おすすめ</span></td>
+            <td>無料</td><td>無料〜</td>
+            <td class="ok">◎</td><td class="ok">◎</td><td class="ok">◎</td><td class="ok">◎</td>
+          </tr>
+          <tr>
+            <td>トリドリマーケティング</td><td>無料</td><td>50,000円〜</td>
+            <td class="ok">○</td><td class="ok">◎</td><td class="ok">○</td><td class="no">×</td>
+          </tr>
+          <tr>
+            <td>INFLUFECT</td><td>200,000円</td><td>9,800円〜</td>
+            <td class="ok">○</td><td class="ok">○</td><td class="no">△</td><td class="no">×</td>
+          </tr>
+          <tr>
+            <td>AnyTag</td><td>要問合せ</td><td>要問合せ</td>
+            <td class="ok">○</td><td class="ok">○</td><td class="no">△</td><td class="no">×</td>
+          </tr>
+          <tr>
+            <td>Find Model</td><td>無料</td><td>無料</td>
+            <td class="no">△</td><td class="ok">○</td><td class="no">△</td><td class="ok">○</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-inner">
+    <div class="section-eyebrow reveal">Detailed Review</div>
+    <h2 class="section-h2 reveal">各ツール詳細レビュー</h2>
+
+    <div class="svc-cards">
+      <div class="svc-card top reveal">
+        <div class="rank gold">🏆 UGCマーケティングおすすめ No.1</div>
+        <div class="svc-head">
+          <div class="svc-logo l-ib">IB</div>
+          <div>
+            <div class="svc-name">InfluBridge</div>
+            <div class="svc-co">InfluBridge（日本市場向けSaaS・沖縄発）</div>
+            <div class="tags">
+              <span class="tag teal">UGC特化</span>
+              <span class="tag amber">無料スタート</span>
+              <span class="tag teal">来店PR対応</span>
+              <span class="tag teal">沖縄発</span>
+            </div>
+          </div>
+        </div>
+        <div class="svc-desc"><strong>UGCマーケティングに特化した、沖縄の小規模店舗向けインフルエンサープラットフォーム。</strong>案件を掲載するだけで地元クリエイターから応募が届き、来店→投稿→資産化の流れを自動化できます。初期費用・月額費用ゼロで始められます。</div>
+        <div class="pts">
+          <div class="pt"><div class="pt-l">初期費用</div><div class="pt-v">無料</div></div>
+          <div class="pt"><div class="pt-l">月額料金</div><div class="pt-v">無料プランあり</div></div>
+          <div class="pt"><div class="pt-l">対応SNS</div><div class="pt-v">IG / TikTok / YouTube</div></div>
+          <div class="pt"><div class="pt-l">UGC生成</div><div class="pt-v">◎ 特化</div></div>
+        </div>
+        <ul class="ckl">
+          <li>来店型UGCを仕組み化（来客→投稿→資産化）</li>
+          <li>沖縄在住クリエイターへのスカウト・マッチング</li>
+          <li>AIがPR単価を自動提案（費用相場がすぐわかる）</li>
+          <li>チャット・取引・報酬管理がプラットフォーム内で完結</li>
+          <li>初期費用ゼロ・クレジットカード不要で試せる</li>
+        </ul>
+        <div class="cta-row">
+          <a href="https://influbridge.jp/brand" class="btn-primary amber-btn">無料で始める →</a>
+          <a href="https://influbridge.jp/lp/mayowanai" class="btn-outline">詳細を見る</a>
+        </div>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="rank">2位</div>
+        <div class="svc-head">
+          <div class="svc-logo l-tr">TR</div>
+          <div>
+            <div class="svc-name">トリドリマーケティング</div>
+            <div class="svc-co">株式会社トリドリ</div>
+            <div class="tags"><span class="tag teal">来店PR対応</span><span class="tag gray">月額5万円〜</span></div>
+          </div>
+        </div>
+        <div class="svc-desc">来店型UGC案件が豊富で飲食・美容業界での実績も多い。<strong>月額50,000円〜の固定費が発生</strong>するため小規模店舗には重荷になりやすい。対応SNSはInstagramのみ。</div>
+        <div class="pts">
+          <div class="pt"><div class="pt-l">初期費用</div><div class="pt-v">無料</div></div>
+          <div class="pt"><div class="pt-l">月額料金</div><div class="pt-v">50,000円〜</div></div>
+          <div class="pt"><div class="pt-l">対応SNS</div><div class="pt-v">Instagram</div></div>
+        </div>
+        <div class="cta-row"><a href="https://toridori-marketing.com/" class="btn-outline" target="_blank" rel="noopener">公式サイトを見る</a></div>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="rank">3位</div>
+        <div class="svc-head">
+          <div class="svc-logo l-if">IF</div>
+          <div>
+            <div class="svc-name">INFLUFECT</div>
+            <div class="svc-co">リデル株式会社</div>
+            <div class="tags"><span class="tag teal">自動化・PDCA</span><span class="tag gray">初期費用20万円</span></div>
+          </div>
+        </div>
+        <div class="svc-desc">UGC生成からPDCA管理まで自動化できる機能が充実。<strong>初期費用20万円＋月額費用</strong>がかかるため個人経営の小規模店舗には向かない。チェーン・法人向け。</div>
+        <div class="pts">
+          <div class="pt"><div class="pt-l">初期費用</div><div class="pt-v">200,000円</div></div>
+          <div class="pt"><div class="pt-l">月額料金</div><div class="pt-v">9,800円〜（年払い）</div></div>
+          <div class="pt"><div class="pt-l">対応SNS</div><div class="pt-v">IG/YT/TikTok/X</div></div>
+        </div>
+        <div class="cta-row"><a href="https://liddell.tokyo/service/influfect/" class="btn-outline" target="_blank" rel="noopener">公式サイトを見る</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OKINAWA -->
+<section id="okinawa">
+  <div class="oki-inner">
+    <div class="section-eyebrow reveal">Okinawa Focus</div>
+    <h2 class="section-h2 reveal">沖縄でUGCが特に効く理由</h2>
+    <p class="section-desc reveal">沖縄はUGCマーケティングが最も効果を発揮しやすいエリアの一つです。</p>
+    <div class="oki-grid">
+      <div class="oki-card reveal reveal-delay-1">
+        <span class="oki-emoji">✈️</span>
+        <div class="oki-title">観光客がSNSでお店を探す</div>
+        <div class="oki-desc">観光客の多くがInstagram・TikTokで「沖縄グルメ」「那覇カフェ」を検索してお店を決める。UGCが来店決定に直結します。</div>
+      </div>
+      <div class="oki-card reveal reveal-delay-2">
+        <span class="oki-emoji">🌺</span>
+        <div class="oki-title">「地元民おすすめ」への絶大な信頼</div>
+        <div class="oki-desc">観光客は「地元の人が行くお店」を強く信頼します。沖縄在住クリエイターの投稿は観光客に最も刺さる口コミです。</div>
+      </div>
+      <div class="oki-card reveal reveal-delay-3">
+        <span class="oki-emoji">📸</span>
+        <div class="oki-title">「映える」コンテンツが豊富</div>
+        <div class="oki-desc">沖縄の料理・景色・体験はSNS映えしやすく、UGCが自然にバズりやすい環境が整っています。</div>
+      </div>
+      <div class="oki-card reveal reveal-delay-4">
+        <span class="oki-emoji">🤝</span>
+        <div class="oki-title">ゆいまーる精神の口コミ文化</div>
+        <div class="oki-desc">沖縄の「ゆいまーる（助け合い）」精神が地域の口コミ文化を育て、地元クリエイターが地元を紹介することへの親和性が高い。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-inner">
+    <div class="section-eyebrow reveal">FAQ</div>
+    <h2 class="section-h2 reveal">よくある質問</h2>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <div class="faq-q-wrap">
+          <span class="faq-badge">Q</span>
+          <div class="faq-q-text">UGCマーケティングは小規模店舗でもできますか？</div>
+        </div>
+        <div class="faq-a">はい、むしろ小規模店舗ほど向いています。地域密着のリアルな口コミは大手の広告より信頼されやすく、InfluBridgeなら初期費用ゼロで始められます。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q-wrap">
+          <span class="faq-badge">Q</span>
+          <div class="faq-q-text">UGCマーケティングの費用相場はいくらですか？</div>
+        </div>
+        <div class="faq-a">来店型UGCであれば、食事・施術の無料提供のみで依頼できるケースも多くあります。フォロワー1〜5万人のマイクロインフルエンサーへの依頼は1投稿5,000〜30,000円が相場です。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q-wrap">
+          <span class="faq-badge">Q</span>
+          <div class="faq-q-text">ホットペッパーとUGCマーケティングは何が違いますか？</div>
+        </div>
+        <div class="faq-a">ホットペッパーは掲載をやめると集客がゼロになりますが、UGCの投稿はSNSに残り続けます。また口コミは広告より信頼されやすく、一度仕組みを作れば資産として集客し続けます。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q-wrap">
+          <span class="faq-badge">Q</span>
+          <div class="faq-q-text">沖縄の店舗でInfluBridgeは使えますか？</div>
+        </div>
+        <div class="faq-a">はい。InfluBridgeは沖縄発のサービスで、沖縄在住クリエイターとのマッチングに特化しています。飲食店・サロン・観光施設など幅広い業種で利用できます。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<section id="footer-cta">
+  <div class="fcta-inner">
+    <div class="fcta-label reveal">Get Started Today</div>
+    <h2 class="fcta-h2 reveal">口コミ集客を、<br><span>仕組み化しよう</span></h2>
+    <p class="fcta-sub reveal">沖縄の小規模店舗向け。初期費用ゼロで今すぐUGCマーケティングを始められます。</p>
+    <div class="fcta-actions reveal">
+      <a href="https://influbridge.jp/brand" class="btn-glow primary">無料で始める →</a>
+      <a href="https://influbridge.jp/lp/mayowanai" class="btn-glow ghost">詳細を見る</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>© 2025 InfluCompare — UGC集客・インフルエンサーツール比較メディア | <a href="https://okinawa-pr.jp">okinawa-pr.jp</a></p>
+  <p style="margin-top:4px">※本記事は公開情報をもとに編集部が作成。最新情報は各公式サイトでご確認ください。</p>
+</footer>
+
+<!-- THREE.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* ===== THREE.JS PARTICLE OCEAN ===== */
+(function() {
+  const canvas = document.getElementById('bg-canvas');
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setSize(window.innerWidth, window.innerHeight);
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 2000);
+  camera.position.set(0, 0, 120);
+
+  // Particle system
+  const count = 3000;
+  const positions = new Float32Array(count * 3);
+  const colors    = new Float32Array(count * 3);
+  const sizes     = new Float32Array(count);
+
+  const color1 = new THREE.Color(0x00B4D8);
+  const color2 = new THREE.Color(0x48CAE4);
+  const color3 = new THREE.Color(0x0891B2);
+
+  for (let i = 0; i < count; i++) {
+    const theta = Math.random() * Math.PI * 2;
+    const phi   = Math.acos(2 * Math.random() - 1);
+    const r     = 80 + Math.random() * 120;
+
+    positions[i * 3]     = r * Math.sin(phi) * Math.cos(theta);
+    positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta) * .5;
+    positions[i * 3 + 2] = r * Math.cos(phi);
+
+    const mix = Math.random();
+    const c = mix < .4 ? color1 : mix < .7 ? color2 : color3;
+    colors[i * 3]     = c.r;
+    colors[i * 3 + 1] = c.g;
+    colors[i * 3 + 2] = c.b;
+
+    sizes[i] = Math.random() * 2.5 + .5;
+  }
+
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  geo.setAttribute('vCol',    new THREE.BufferAttribute(colors, 3));
+  geo.setAttribute('size',     new THREE.BufferAttribute(sizes, 1));
+
+  const mat = new THREE.ShaderMaterial({
+    vertexShader: `
+      attribute float size;
+      attribute vec3 vCol;
+      varying vec3 vColor;
+      varying float vAlpha;
+      void main() {
+        vColor = vCol;
+        vec4 mv = modelViewMatrix * vec4(position, 1.0);
+        gl_PointSize = size * (200.0 / -mv.z);
+        gl_Position = projectionMatrix * mv;
+        vAlpha = smoothstep(200.0, 80.0, -mv.z);
+      }
+    `,
+    fragmentShader: `
+      varying vec3 vColor;
+      varying float vAlpha;
+      void main() {
+        float d = length(gl_PointCoord - vec2(.5));
+        if (d > .5) discard;
+        float alpha = (1.0 - d * 2.0) * vAlpha * .7;
+        gl_FragColor = vec4(vColor, alpha);
+      }
+    `,
+    transparent: true,
+    depthWrite: false,
+    vertexColors: true,
+    blending: THREE.AdditiveBlending,
+  });
+
+  const particles = new THREE.Points(geo, mat);
+  scene.add(particles);
+
+  // Floating orbs
+  [
+    { pos: [-40, 20, -60],  r: 18, c: 0x00B4D8, o: .04 },
+    { pos: [60, -30, -80],  r: 25, c: 0x48CAE4, o: .03 },
+    { pos: [0,  50, -100],  r: 12, c: 0x0891B2, o: .05 },
+  ].forEach(d => {
+    const g = new THREE.SphereGeometry(d.r, 32, 32);
+    const m = new THREE.MeshBasicMaterial({ color: d.c, transparent: true, opacity: d.o, wireframe: false });
+    const mesh = new THREE.Mesh(g, m);
+    mesh.position.set(...d.pos);
+    scene.add(mesh);
+  });
+
+  // Mouse
+  let mx = 0, my = 0;
+  window.addEventListener('mousemove', e => {
+    mx = (e.clientX / window.innerWidth  - .5) * .5;
+    my = (e.clientY / window.innerHeight - .5) * .5;
+  });
+
+  // Scroll
+  let scrollY = 0;
+  window.addEventListener('scroll', () => scrollY = window.scrollY);
+
+  // Resize
+  window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+
+  let t = 0;
+  function animate() {
+    requestAnimationFrame(animate);
+    t += .003;
+
+    particles.rotation.y = t * .08 + mx * .4;
+    particles.rotation.x = Math.sin(t * .2) * .04 - my * .2;
+
+    // Scroll parallax
+    camera.position.y = -scrollY * .02;
+
+    // Breathing scale
+    particles.scale.setScalar(1 + Math.sin(t * .5) * .015);
+
+    renderer.render(scene, camera);
+  }
+  animate();
+})();
+
+/* ===== CURSOR ===== */
+(function() {
+  const cursor = document.getElementById('cursor');
+  const ring   = document.getElementById('cursor-ring');
+  let rx = 0, ry = 0;
+
+  window.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top  = e.clientY + 'px';
+    rx += (e.clientX - rx) * .12;
+    ry += (e.clientY - ry) * .12;
+    ring.style.left = rx + 'px';
+    ring.style.top  = ry + 'px';
+  });
+
+  function lagRing() {
+    ring.style.left = rx + 'px';
+    ring.style.top  = ry + 'px';
+    requestAnimationFrame(lagRing);
+  }
+  lagRing();
+})();
+
+/* ===== NAV SCROLL ===== */
+window.addEventListener('scroll', () => {
+  document.getElementById('gnav').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+/* ===== 3D CARD TILT ===== */
+document.querySelectorAll('.card-3d').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width;
+    const y = (e.clientY - r.top)  / r.height;
+    const rx = (y - .5) * -16;
+    const ry = (x - .5) *  16;
+    card.style.transform = `perspective(600px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(8px)`;
+    card.style.setProperty('--mx', `${x * 100}%`);
+    card.style.setProperty('--my', `${y * 100}%`);
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+  });
+});
+
+/* ===== SCROLL REVEAL ===== */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ===== STAT NUMBER COUNTER ===== */
+const statIO = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const text = el.textContent;
+    if (text === '∞') return;
+    const isPercent = text.includes('%');
+    const isX = text.includes('×') || text.includes('x') || text.includes('X');
+    const num = parseFloat(text);
+    if (isNaN(num)) return;
+    let start = 0;
+    const duration = 1800;
+    const startTime = performance.now();
+    function update(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const current = start + (num - start) * ease;
+      const suffix = isPercent ? '%' : isX ? '×' : '';
+      el.textContent = (Number.isInteger(num) ? Math.round(current) : current.toFixed(1)) + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+    statIO.unobserve(el);
+  });
+}, { threshold: .5 });
+document.querySelectorAll('.stat-num').forEach(el => statIO.observe(el));
+
+/* ===== HERO BG PARALLAX ===== */
+window.addEventListener('scroll', () => {
+  const hero = document.getElementById('hero');
+  const y = window.scrollY;
+  if (y < window.innerHeight) {
+    hero.style.setProperty('--scroll', y + 'px');
+  }
+});
+</script>
+</body>
+</html>
